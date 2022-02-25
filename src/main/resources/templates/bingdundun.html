@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" name="viewport">
+    <link rel="stylesheet" href="panda.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>一只奇怪的冰墩墩</title>
+</head>
+<body>
+    <button onclick="show(1)" class="btn btn-info btn-sm">粉红</button>
+    <button onclick="show(2)" class="btn btn-info btn-sm">橙色</button>
+    <button onclick="show(3)" class="btn btn-info btn-sm">黄色</button>
+    <button onclick="show(4)" class="btn btn-info btn-sm">青色</button>
+    <button onclick="show(5)" class="btn btn-info btn-sm">奇怪冰墩墩</button>
+    <br><br><br>
+    <div class="wrapper" id="bingdd">
+        <div class="body"></div>
+        <div class="ear ear_l" id="ear_l"></div>
+        <div class="ear ear_r" id="ear_r"></div>
+        <div class="arm arm_l" id="arm_l"></div>
+        <div class="arm arm_r" id="arm_r">
+            <div class="heart">
+                <div class="heart_l"></div>
+                <div class="heart_r"></div>
+            </div>
+        </div>
+        <div class="leg leg_l" id="leg_l"></div>
+        <div class="leg leg_r" id="leg_r"></div>
+        <div class="face">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+            <div class="eye eye_l" id="eye_l">
+                <div class="eye-c1">
+                    <div class="eye-c2">
+                        <div class="eye-c3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="eye eye_r" id="eye_r">
+                <div class="eye-c1">
+                    <div class="eye-c2">
+                        <div class="eye-c3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nose">
+                <div class="nose-c"></div>
+            </div>
+            <div class="mouth"></div>
+            <div class="mouth-c"></div>
+
+        </div>
+    </div>
+
+    <script>
+        const wWidth = window.innerWidth;
+        if (wWidth < 666) {
+            const bdd = document.getElementById('bingdd');
+            bdd.style.zoom = `${wWidth / 666}`;
+        }
+
+        function show(f){
+            if(f==1){
+                $(".ear").css({"background-color":"#ea5c78"});
+                $(".arm").css({"background-color":"#ea5c78"});
+                $(".leg").css({"background-color":"#ea5c78"});
+                $(".eye").css({"background-color":"#ea5c78"});
+            }
+            if(f==2){
+                $(".ear").css({"background-color":"#e87639"});
+                $(".arm").css({"background-color":"#e87639"});
+                $(".leg").css({"background-color":"#e87639"});
+                $(".eye").css({"background-color":"#e87639"});
+            }
+            if(f==3){
+                $(".ear").css({"background-color":"#f8ed11"});
+                $(".arm").css({"background-color":"#f8ed11"});
+                $(".leg").css({"background-color":"#f8ed11"});
+                $(".eye").css({"background-color":"#f8ed11"});
+            }
+            if(f==4){
+                $(".ear").css({"background-color":"#4fea24"});
+                $(".arm").css({"background-color":"#4fea24"});
+                $(".leg").css({"background-color":"#4fea24"});
+                $(".eye").css({"background-color":"#4fea24"});
+            }
+            if(f==5){
+                $("#ear_l").css({"background-color":"#f50404"});
+                $("#ear_r").css({"background-color":"#1e8002"});
+                $("#arm_l").css({"background-color":"#f8ed11"});
+                $("#arm_r").css({"background-color":"#e87639"});
+                $("#leg_l").css({"background-color":"#2452ea"});
+                $("#leg_r").css({"background-color":"#ea5c78"});
+                $("#eye_l").css({"background-color":"#4fea24"});
+                $("#eye_r").css({"background-color":"#741fad"});
+            }
+
+        }
+    </script>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"/>
+</body>
+</html>
